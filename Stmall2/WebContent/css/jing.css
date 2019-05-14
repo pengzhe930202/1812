@@ -1,0 +1,322 @@
+body{
+	margin: 0px;
+}
+.navbg{
+	background-color: #F1F1F1;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #666;
+}
+.nav{
+	background-color: yellow;
+	width: 1210px;
+	margin: auto;		/* 鍙互浣縩av 鍦ㄧ埗鍏冪礌涓眳涓樉绀�*/
+}
+
+.nav .state{
+	/*display: inline;	/*灏嗗厓绱犲己鍒惰缃负琛屽唴鍏冪礌*/
+	float: left;
+}
+.nav .menu{
+	float: right;
+}
+
+.nav .menu a{
+	display: inline-block;
+	color: #666;
+	text-decoration: none; /*text-decoration 鏂囨湰鐨勪笅鍒掔嚎, 鍒犻櫎绾�*/
+	margin: 0px 5px;
+}
+/* 浼被 鏍峰紡
+ * link   : 姝ｅ父鐘舵��
+ * visited : 宸茬粡璁块棶杩�
+ * hover   : 榧犳爣绉讳笂
+ * active  : 榧犳爣鎸変笅
+ * 
+ * 涓嶄粎浠呭彲浠ュ瓒呴摼鎺ヨ繘琛屼吉绫绘牱寮忕殑璁剧疆, 涔熷彲浠ュ鍏跺畠鍏冪礌璁剧疆
+ * 
+ * 浼被鏍峰紡璁剧疆鐨勯『搴忚姹�
+ * hover 蹇呴』璁剧疆鍦� link 鍜寁isited涔嬪悗
+ * active 蹇呴』瑕佽缃湪hover涔嬪悗.
+ * 
+ * 鍚﹀垯鍙兘涓嶈捣浣滅敤.
+ * 
+ */
+.nav .menu a:hover{
+	color: #C81623;
+}
+.nav .menu .phonejd{
+	display: inline-block;
+	width: 15px;		/* 鐩存帴閽堝琛屽唴鍏冪礌璁剧疆瀹介珮, 閫氳繃鏄病鏈夋晥鏋�*/
+	height: 20px;
+	background-image: url(../img/phone.png); /* ../ 浠ｈ〃浠庡綋鍓嶆枃浠舵墍鍦ㄧ殑鏂囦欢澶逛腑鍚戜笂璺充竴灞�*/
+	/*
+	 * 鐩稿瀹氫綅
+	 * 
+	 * position灞炴��
+	 * 鐢ㄦ潵璁剧疆鍏冪礌鐨勫畾浣嶆柟寮�
+	 * 榛樿鏄� static   鎸夌収HTML 鏂囨。娴�
+	 * relative: 杩涜鐩稿瀹氫綅, 鍦ㄨ嚜韬湰鏉ュ湪鏂囨。娴佷腑鐨勪綅缃繘琛屽亸绉�;
+	 * 		top right bottom left
+	 */
+	position: relative;
+	top:5px;
+}
+
+
+.logo {
+	width: 1210px;
+	margin: auto;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+.logo .logoimg{
+	float: left;
+}
+.logo .type{
+	float: left;
+	margin-left: 50px;
+	padding-top: 20px;
+}
+.logo .type a{
+	color: #666;
+	font-size: 12px;
+	border: 1px solid #DDD;
+	padding: 5px;
+	text-decoration: none;
+}
+.logo .type a:hover{
+	color: #C81623;
+}
+.logo .search{
+	float: left;
+	margin-left: 120px;
+}
+.logo .search input[type='text']{
+	border: 2px solid #C81623;
+	width: 450px;
+	height: 26px;
+}
+.logo .search input[type="submit"]{
+	border: 2px solid #C81623;
+	background-color: #C81623;
+	color: white;
+	height: 32px;
+	position: relative;
+	top: 1px;
+}
+.logo .search .menu {
+	margin-top: 5px;
+}
+.logo .search .menu a{
+	color: #666666;
+	font-size: 12px;
+	text-decoration: none;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+.logo .search .menu a:hover{
+	color: #F30213;
+}
+.logo .cart{
+	float: left;
+	border: 1px solid #DDD;
+	background-color: #F9F9F9;
+	margin-left: 70px;
+	padding: 10px;
+}
+.logo .cart a{
+	color: #666;
+	font-size: 12px;
+	text-decoration: none;
+}
+.logo .cart .cartimg{
+	display: inline-block;
+	background-image: url(../img/phone.png);
+	background-position-y: -90px;
+	width: 18px;
+	height: 16px;
+}
+.logo .cart .cartnum{
+	padding: 0px 3px;
+	color: white;
+	background: #C81623;
+	font-size: 12px;
+	border-radius: 10px 10px 10px 10px; /* 璁剧疆鍦嗚 椤哄簭锛� 宸︿笂锛� 鍙充笂锛� 鍙充笅锛� 宸︿笅*/
+	position: relative;
+	top:0px;
+}
+.clearfloat{
+	clear: both; /* 娓呴櫎娴姩 */
+}
+
+.hw{
+	margin: auto;
+	width: 100%px;
+	max-width: 1920px;
+	background-position-x: center;
+}
+
+
+.hw .menu{
+	background-color: white;
+	height: 40px;
+	font-weight: 700;
+}
+
+.hw .menu ul{
+	margin: auto;
+	width: 1000px;
+	
+}
+.hw .menu ul li{
+	display: inline-block;
+}
+
+.hw .menu ul li a{
+	color: #333;
+	font-size: 14px;
+	
+	text-decoration: none;
+	line-height: 40px;
+	padding: 10px;
+}
+.hw .menu ul li a:hover{
+	color: #f30213;;
+}
+.hw .menu ul li span a{
+	color: white;
+}
+.hw .menu ul li span a:hover{
+	color: white;
+}
+
+
+.hw .menu ul li .showall{
+	background-color: #f30213;;
+	padding: 12px 45px;
+	background-image: url(../img/menu.gif);
+	background-repeat: no-repeat;
+	background-position-x: 	140px;
+	background-position-y: 5px;
+	
+}
+.hw .menu ul ul{
+	display: inline;
+	
+	/*
+	 * 缁濆瀹氫綅
+	 * postition: 
+	 */
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	background-color: white;
+	visibility: hidden;		/* 闅愯棌  */
+}
+.hw .menu ul li:hover ul{
+	visibility: visible;
+}
+hr{
+	margin-top: 0px;
+}
+.jie{
+	color: #666;
+	font-size: 12px;
+	padding-left: 200px;
+	margin: 10px 0px;
+}
+.jie a{
+	text-decoration: none;
+	color: #666;
+}
+.jie a:hover{
+	color: #F30213;
+}
+.biao{
+	margin-left: 80px;
+	
+}
+.biao td{
+	color: #666;
+	font-size: 12px;
+	padding: 20px 0px;
+	
+}
+.biao td a{
+	color:#005aa0;
+	font-size: 12px;
+	text-decoration: none;
+}
+.biao td a:hover{
+	color: #F30213;
+}
+.biao td form select{
+	color: #005AA0;
+	font-size: 12px;
+}
+.ping{
+	color: #666;
+	font-size: 12px;
+	margin:10px 0px 0px 80px;
+	background-color: #F1F1F1;
+	padding: 10px 0px;
+}
+.ping span{
+	border: 1px solid;
+}
+.dizhi{
+	color: #666;
+	font-size: 12px;
+	background-color: #F1F1F1;
+	padding: 10px 0px;
+	margin-left: 80px;
+}
+.si{
+	margin-left: 80px;
+}
+.si td{
+	color: #F30213;
+	font-size: 20px;
+	width: 220px
+}
+.si td a{
+	color: #666;
+	font-size: 12px;
+	text-decoration: none;
+}
+.si td a:hover{
+	color: #F30213;
+}
+
+#page{
+	
+}
+
+
+#page li{
+	color: #333;
+    border: 1px solid #ddd;
+    background-color: #f7f7f7;
+    background-repeat: repeat-x;
+	display: inline-block;
+	height: 36px;
+    line-height: 36px;
+    padding: 0 14px;
+    margin-right: 5px;
+    font-size: 14px;
+}
+#page li a{
+	color: #333;
+	text-decoration: none;
+}
+#page .active{
+	background: #fff;
+	cursor: default;
+	
+}
+#page .active a{
+	color: #ccc;
+}

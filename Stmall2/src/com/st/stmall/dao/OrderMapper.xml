@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.st.stmall.dao.OrderMapper">
+
+	<insert id="add" parameterType="com.st.stmall.pojo.Order">
+		<selectKey keyProperty="onum" resultType="java.lang.String" order="BEFORE">
+			select UUID()
+		</selectKey>
+		insert into `order` (onum,oprice,cid,oaddr,ophone,oname) 
+		values (#{onum},#{oprice},#{cid},#{oaddr},#{ophone},#{oname})
+	</insert>
+	
+	<resultMap type="com.st.stmall.pojo.Order" id="ordermap">
+		<id column="onum" property="onum"/>
+		<result column="odate" property="odate"/>
+		<result column="oprice" property="oprice"/>
+		<result column="cid" property="cid"/>
+		<result column="oaddr" property="oaddr"/>
+		<result column="ophone" property="ophone"/>
+		<result column="oname" property="oname"/>
+		<result column="ocode" property="ocode"/>
+		
+		<collection property="list" ofType="com.st.stmall.pojo.Details">
+			<id column="did" property="did"/>
+			<result column="onum" property="onum"/>
+			<result column="gid" property="gid"/>
+			<result column="gcount" property="gcount"/>
+			<result column="gprice" property="gprice"/>
+			<result column="gname" property="gname"/>
+		</collection>
+	</resultMap>
+	
+	<select id="selectByCid" resultMap="ordermap">
+		select * from `order`,details
+		where cid=#{cid} and `order`.onum = details.onum
+		order by odate desc
+	</select>
+	<select id="selectAllOrder" resultMap="ordermap">
+		select * from `order`,details
+		where `order`.onum = details.onum
+		order by odate desc
+	</select>
+	
+	<select id="getRows" parameterType="com.st.stmall.pojo.Details" resultType="Integer">
+		select count(*) as count from details
+		
+	</select>
+	
+	<select id="selectAll" parameterType="com.st.stmall.util.Page" resultType="com.st.stmall.pojo.Details">
+		select * from details
+		
+		limit #{start}, #{pagerows}
+	</select>
+	
+	
+</mapper>

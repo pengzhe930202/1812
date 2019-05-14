@@ -1,0 +1,129 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.topbg{
+	background-image: url(../img/headbg.jpg);
+	background-repeat-y: no-repeat;
+	background-position: bottom;
+}
+.top{
+	width: 1210px;
+	margin: auto;
+	
+}
+.top img{
+	float: left;
+	margin: 20px 0px;
+}
+.top h1{
+	float: left;
+	color: #333;
+	font-size: 24px ;
+	font-weight: 400;
+	margin: 34px 25px;
+}
+.top .login{
+	float: right;
+	color: #888;
+	margin-top: 40px;
+}
+.clear{
+	clear: both;
+}
+
+.top .login a{
+	color: #e22;
+	text-decoration: none;
+}
+.top .login a:hover{
+	color: #C81623;
+	text-decoration: underline;
+}
+
+
+.center{
+	width: 450px;
+	margin: auto;
+	border: 1px solid red;
+}
+
+.center h1{
+	font-weight: 400;
+	text-align: center;
+	margin: 20px;
+	
+}
+.center div{
+	margin: 30px 0px;
+}
+.center .hint{
+	color: #888888;
+	font-size: 12px;
+	margin: 0px;
+}
+.center div label{
+	border: 1px solid #888888;
+	border-right: 0px;
+	color: #666666;
+	width: 108px;
+	height: 35px;
+	display: inline-block;
+	text-align: center;
+	padding-top: 10px;
+}
+.center div input{
+	border: 1px solid #888888;
+	width: 290px;
+	height: 45px;
+}
+.center div input[type="submit"]{
+	width: 400px;
+	background-color: #e2231a;
+	color: white;
+	font-size: 16px;
+}
+.center div input[type="submit"]:hover{
+	background-color: #C81623;
+}
+.center .regother{
+	margin: 0px;
+	padding: 0px;
+}
+.center .regother a{
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+}
+.center .regother a:hover{
+	color: #C81623;
+	
+}
+.center .rege{
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+.center .regg{
+	margin: 0px;
+	padding: 0px;
+	float: right
+}
+.bottom{
+	width: 1210px;
+	margin: auto;
+	text-align: center;
+	border-top: 1px solid #888888;
+	padding: 30px ;
+	color: #888;
+	font-size: 12px;
+	margin-top: 100px;
+}
+.bottom a{
+	color: #888;
+	font-size: 12px;
+	text-decoration: none;
+	margin: 0px 10px;
+}

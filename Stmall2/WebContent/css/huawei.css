@@ -1,0 +1,401 @@
+
+body{
+	margin: 0px;
+}
+.navbg{
+	background-color: #F1F1F1;
+	height: 30px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #666;
+}
+.nav{
+	background-color: yellow;
+	width: 1210px;
+	margin: auto;		/* 鍙互浣縩av 鍦ㄧ埗鍏冪礌涓眳涓樉绀�*/
+}
+
+.nav .state{
+	/*display: inline;	/*灏嗗厓绱犲己鍒惰缃负琛屽唴鍏冪礌*/
+	float: left;
+}
+.nav .menu{
+	float: right;
+}
+
+.nav .menu a{
+	display: inline-block;
+	color: #666;
+	text-decoration: none; /*text-decoration 鏂囨湰鐨勪笅鍒掔嚎, 鍒犻櫎绾�*/
+	margin: 0px 5px;
+}
+/* 浼被 鏍峰紡
+ * link   : 姝ｅ父鐘舵��
+ * visited : 宸茬粡璁块棶杩�
+ * hover   : 榧犳爣绉讳笂
+ * active  : 榧犳爣鎸変笅
+ * 
+ * 涓嶄粎浠呭彲浠ュ瓒呴摼鎺ヨ繘琛屼吉绫绘牱寮忕殑璁剧疆, 涔熷彲浠ュ鍏跺畠鍏冪礌璁剧疆
+ * 
+ * 浼被鏍峰紡璁剧疆鐨勯『搴忚姹�
+ * hover 蹇呴』璁剧疆鍦� link 鍜寁isited涔嬪悗
+ * active 蹇呴』瑕佽缃湪hover涔嬪悗.
+ * 
+ * 鍚﹀垯鍙兘涓嶈捣浣滅敤.
+ * 
+ */
+.nav .menu a:hover{
+	color: #C81623;
+}
+.nav .menu .phonejd{
+	display: inline-block;
+	width: 15px;		/* 鐩存帴閽堝琛屽唴鍏冪礌璁剧疆瀹介珮, 閫氳繃鏄病鏈夋晥鏋�*/
+	height: 20px;
+	background-image: url(../img/phone.png); /* ../ 浠ｈ〃浠庡綋鍓嶆枃浠舵墍鍦ㄧ殑鏂囦欢澶逛腑鍚戜笂璺充竴灞�*/
+	/*
+	 * 鐩稿瀹氫綅
+	 * 
+	 * position灞炴��
+	 * 鐢ㄦ潵璁剧疆鍏冪礌鐨勫畾浣嶆柟寮�
+	 * 榛樿鏄� static   鎸夌収HTML 鏂囨。娴�
+	 * relative: 杩涜鐩稿瀹氫綅, 鍦ㄨ嚜韬湰鏉ュ湪鏂囨。娴佷腑鐨勪綅缃繘琛屽亸绉�;
+	 * 		top right bottom left
+	 */
+	position: relative;
+	top:5px;
+}
+
+
+.logo {
+	width: 1210px;
+	margin: auto;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+.logo img{
+	margin-top: 5px;
+}
+
+.logo .logoimg{
+	float: left;
+}
+.logo .type{
+	float: left;
+	margin-left: 50px;
+	padding-top: 20px;
+}
+.logo .type a{
+	color: #666;
+	font-size: 12px;
+	border: 1px solid #DDD;
+	padding: 5px;
+	text-decoration: none;
+}
+.logo .type a:hover{
+	color: #C81623;
+}
+.logo .search{
+	float: left;
+	margin-left: 120px;
+}
+.logo .search input[type='text']{
+	border: 2px solid #C81623;
+	width: 450px;
+	height: 26px;
+}
+.logo .search input[type="submit"]{
+	border: 2px solid #C81623;
+	background-color: #C81623;
+	color: white;
+	height: 32px;
+	position: relative;
+	top: 1px;
+}
+.logo .search .menu {
+	margin-top: 5px;
+}
+.logo .search .menu a{
+	color: #666666;
+	font-size: 12px;
+	text-decoration: none;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.logo .search .menu a:hover{
+	color: #C81623;
+}
+
+.logo .cart{
+	float: left;
+	border: 1px solid #DDD;
+	background-color: #F9F9F9;
+	margin-left: 70px;
+	padding: 10px;
+}
+.logo .cart a{
+	color: #666;
+	font-size: 12px;
+	text-decoration: none;
+}
+.logo .cart .cartimg{
+	display: inline-block;
+	background-image: url(../img/phone.png);
+	background-position-y: -90px;
+	width: 18px;
+	height: 16px;
+}
+.logo .cart .cartnum{
+	padding: 0px 3px;
+	color: white;
+	background: #C81623;
+	font-size: 12px;
+	border-radius: 10px 10px 10px 0px; /* 璁剧疆鍦嗚 椤哄簭锛� 宸︿笂锛� 鍙充笂锛� 鍙充笅锛� 宸︿笅*/
+	position: relative;
+	top:-20px;
+}
+.clearfloat{
+	clear: both; /* 娓呴櫎娴姩 */
+}
+
+.hw{
+	margin: auto;
+	width: 100%px;
+	max-width: 1920px;
+	background-position-x: center;
+}
+.hw .hwimg{
+	background-image: url(../img/huwei2.jpg);
+	height: 110px;
+}
+
+.hw .menu{
+	background-color: #444;
+	height: 40px;
+}
+
+.hw .menu ul{
+	margin: auto;
+	width: 1000px;
+}
+
+
+
+.hw .menu ul .p ul li a{
+	color: #666;
+	font-size: 12px;	
+	
+}
+.hw .menu ul .p ul li a:hover{
+	text-decoration:underline ;
+	background-color: #eee;
+	
+}
+.hw .menu ul li ul li a:hover{
+	background-color: white;
+} 
+
+.hw .menu ul li{
+	display: inline-block;
+	color: black;
+	font-size: 14px;
+	height: 40px;
+}
+
+.hw .menu ul li:hover{
+	background-color: #eee;
+}
+
+.hw .menu ul li a{
+	color: white;
+	text-decoration: none;
+	line-height: 40px;
+	padding: 10px;
+}
+
+.hw .menu ul li a:hover{
+	background-color: #e4393c;
+}
+
+.hw .menu ul li .showall{
+	background-color: #e4393c;
+	padding: 10px 50px 10px 30px;
+	background-image: url(../img/menu.gif);
+	background-repeat: no-repeat;
+	background-position-x: 	140px;
+	background-position-y: 5px;
+}
+.hw .menu ul ul{
+	display: inline;
+	
+	/*
+	 * 缁濆瀹氫綅
+	 * postition: 
+	 */
+	position: absolute;
+	width: 800px;
+	height: 300px;
+	background-color:white;
+	visibility: hidden;		/* 闅愯棌  */
+}
+.hw .menu ul li:hover ul{
+	visibility: visible;
+}
+.jdapp{
+	background-color: #C81623;
+	width: 150px;
+	height: 190px;
+	border-radius: 5px;
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+	
+	/* 
+	 * fixed 鐩稿浜庢祻瑙堝櫒绐楀彛杩涜瀹氫綅
+	 */
+	position: fixed;
+	top: 80px;
+	right: 100px;
+}
+/* 
+ * 鍏冪礌鐨勫畾浣�
+ * 
+ * HTML鏍囧噯鏂囨。娴�
+ * 
+ * 	鍧楀厓绱� 
+ *  琛屽唴鍏冪礌
+ * 
+ * 娴姩
+ * 	float: left right;
+ * 
+ * 	娓呴櫎娴姩: clear: left right both
+ * 
+ * 瀹氫綅:
+ * 		position灞炴��
+ * 			static 
+ * 			relative: 鐩稿瀹氫綅, 鍦ㄦ枃妗ｆ祦涓墍鍗犵┖闂翠繚鎸佷笉鍙�, 鍏冪礌鐩稿浜庤繖涓綅缃繘琛屽亸绉�
+ * 			absolute: 缁濆瀹氫綅, 鑴辩鏂囨。娴�, 鍏冪礌鐨勪綅缃�, 鐩稿浜庣埗鑺傜偣涓�, 鏈�杩戜竴涓畾浣嶇殑鍏冪礌.
+ * 			fixed: 娴忚鍣ㄥ畾浣�, 鑴辩鏂囨。娴�, 鍏冪礌鐨勪綅缃�, 鐩稿浜庢祻瑙堢獥鍙ｇ殑.
+ * 
+ * 
+ * 灞傚彔: 
+ * 		z-index: 鏁板��;  鍊艰秺澶�, 灏变細浼樺厛鏄剧ず鍦ㄦ祻瑙堝櫒鐨勫墠闈�.
+ */
+.jdapp img{
+	padding-bottom:30px;
+	position: relative;
+	top: -25px;
+	right: 23px;
+}
+
+.jdapp .close{
+	font-size: 10px;
+	border: 1px solid white;
+	background-color: #C81623;
+	border-radius: 10px;
+	width: 20px;
+	height: 20px;
+	position: relative;
+	top: -260px;
+	left: 140px;
+}
+
+.shouji{
+	background-color: #F1F1F1;
+	height: 40px;
+	line-height: 30px;
+	font-size: 12px;
+	color: #666;
+	padding-left: 40px;
+	padding-top: 5px;
+}
+.shouji span{
+	padding-left: 500px;
+} 
+
+.shouji a{
+	display: inline-block;
+	color: #666;
+	text-decoration: none; /*text-decoration 鏂囨湰鐨勪笅鍒掔嚎, 鍒犻櫎绾�*/
+	margin: 0px 5px;
+}
+.shouji a:hover{
+	color: #C81623;
+}
+.nei{
+	float: right;
+	margin: 30px 110px 10px 10px ;
+}
+
+img{
+	margin: 40px 0px 10px 40px ;
+}
+h4{
+	color: #666;
+	font-size: 16px;
+}
+.a{
+	color: #e4393c;
+	font-size: 12px;
+}
+p a{
+	color: #5e69ad;
+}
+p{
+	color: #999;
+	font-size: 12px;
+}
+p span{
+	color:#e4393c ;
+	font-size: 22px;
+}
+.plus span{
+	color: #333;
+	font-size: 16px;
+}
+p a{
+	color: #005aa0;
+}
+.cu span{
+	color:#df3033 ;
+	font-size:12px ;
+	border:1px solid #df3033 ;
+	padding: 2px 3px;
+    margin-right: 5px;
+}
+div span p{
+	background: #fff;
+}
+.pei span{
+	color:#e4393c ;
+	font-size: 12px;
+}
+.yan span{
+	border: 1px solid ;
+	color: #666;
+	font-size: 12px;
+	padding: 9px 6px;
+	margin: 0px 5px 0px 0px;
+}
+.yan{
+	margin: 30px 14px 10px 0px;
+}
+#car{
+	border:1px solid ;
+	background-color: #df3033;
+    color: #fff;
+    padding: 10 26px;
+    font-size: 18px;
+    margin: 20px 0px 0px 50px;
+}
+form{
+	color: #999;
+	font-size: 12px;
+	margin: 0px 0px 0px 0px;
+	
+}
+form select{
+	margin: 10px 0px 0px 0px;
+	padding: 9px 6px;
+}

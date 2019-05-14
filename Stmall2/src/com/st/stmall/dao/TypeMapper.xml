@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.st.stmall.dao.TypeMapper">
+	
+	<insert id="addtype" parameterType="com.st.stmall.pojo.Type">
+		insert into type (tname,ptid) values (#{tname},#{ptid})
+	</insert>
+	
+	<select id="getRows" parameterType="com.st.stmall.pojo.Type" resultType="Integer">
+		select count(*) as count from type
+		<where>
+			<if test="tname != null and tname != '' ">and tname like '%${tname}%'</if>
+			
+		</where>
+	</select>
+	
+	<select id="selectAll" parameterType="com.st.stmall.util.Page" resultType="com.st.stmall.pojo.Type">
+		select * from type
+		<where>
+			<if test="where.tname != null and where.tname != '' ">and tname like '%${where.tname}%'</if>
+			
+		</where>
+		limit #{start}, #{pagerows}
+	</select>
+	
+	<update id="updatetype" parameterType="com.st.stmall.pojo.Type">
+		update type set ptid=#{ptid},tname=#{tname} where tid=#{tid}
+	</update>
+	
+	<select id="getFType" resultType="HashMap">
+		select * from type where ptid is null
+	</select>
+	
+	<select id="getSType" parameterType="Integer" resultType="HashMap">
+		select * from type
+		<where>
+			<choose>
+				<when test="value != null"> and ptid = ${value}</when>
+				<otherwise>
+					and ptid is not null
+				</otherwise>
+			</choose>
+		</where>
+	</select>
+</mapper>

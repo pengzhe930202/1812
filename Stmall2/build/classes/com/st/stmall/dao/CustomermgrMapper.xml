@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.st.stmall.dao.CustomermgrMapper">
+	
+	<select id="getRows" parameterType="com.st.stmall.pojo.Customer" resultType="Integer">
+		select count(*) as count from customer
+		<where>
+			<if test="cname != null and cname != '' ">and cname like '%${cname}%'</if>
+			
+		</where>
+	</select>
+	
+	<select id="selectAll" parameterType="com.st.stmall.util.Page" resultType="com.st.stmall.pojo.Customer">
+		select * from customer
+		<where>
+			<if test="where.cname != null and where.cname != '' ">and cname like '%${where.cname}%'</if>
+			
+		</where>
+		limit #{start}, #{pagerows}
+	</select>
+	
+	<update id="updatecustomer" parameterType="com.st.stmall.pojo.Customer">
+		 update customer
+	    <set>
+	      <if test="password != ''">password=#{password},</if>
+	      <if test="cphone != ''">cphone=#{cphone},</if>
+	      <if test="crealname != ''">crealname=#{crealname},</if>
+	      <if test="ccard != ''">ccard=#{ccard},</if>
+	      <if test="caddr != ''">caddr=#{caddr},</if>
+	      <if test="cphone == ''">cphone=#{cphone},</if>
+	      <if test="crealname == ''">crealname=#{crealname},</if>
+	      <if test="ccard == ''">ccard=#{ccard},</if>
+	      <if test="caddr == ''">caddr=#{caddr},</if>
+	    </set>
+	  where cid=#{cid}
+	</update>
+</mapper>
